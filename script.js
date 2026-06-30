@@ -5638,10 +5638,33 @@ function enterWorkspaceHome() {
   routeToAgentOSHome();
 }
 
-function openAgentOSProject(projectId) {
+function openYuanfudaoWorkflowEditor() {
+  const params = new URLSearchParams(location.search);
+  params.set("workflowId", n8nMirrorWorkflow.id);
+  history.replaceState(null, "", `?${params.toString()}#n8n`);
   document.body.classList.remove("agentos-visible");
   $(".app-shell")?.classList.remove("sidebar-collapsed");
-  renderAgentConfigPage(projectId === "yuanfudao" ? "sales-skills" : "workflow-build");
+  renderPage("n8n");
+}
+
+function openAgentOSProject(projectId) {
+  if (projectId === "yuanfudao") {
+    openYuanfudaoWorkflowEditor();
+    return;
+  }
+  document.body.classList.remove("agentos-visible");
+  $(".app-shell")?.classList.remove("sidebar-collapsed");
+  renderAgentConfigPage("workflow-build");
+}
+
+function submitAgentOSPrompt() {
+  const prompt = $("#agentosPrompt")?.value.trim() || "";
+  if (!prompt) {
+    showToast("请输入产品介绍或上传工作流文件");
+    return;
+  }
+  sessionStorage.setItem("agentosPromptDraft", prompt);
+  openYuanfudaoWorkflowEditor();
 }
 
 function enterStudio() {
@@ -5850,8 +5873,7 @@ function initEvents() {
 
     const agentosSend = event.target.closest("[data-agentos-send]");
     if (agentosSend) {
-      const value = $("#agentosPrompt")?.value.trim();
-      showToast(value ? "已开始创建销售智能体草稿" : "请输入产品介绍或上传工作流文件");
+      submitAgentOSPrompt();
       return;
     }
 
@@ -6667,8 +6689,7 @@ function initEvents() {
   $("#agentosPrompt")?.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
     event.preventDefault();
-    const value = event.currentTarget.value.trim();
-    showToast(value ? "已开始创建销售智能体草稿" : "请输入产品介绍或上传工作流文件");
+    submitAgentOSPrompt();
   });
 
   document.addEventListener("keydown", (event) => {

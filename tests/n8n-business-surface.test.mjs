@@ -287,7 +287,17 @@ test("agent configuration shell uses editable project name and a white workspace
   assert.match(index, /data-agentos-panel="workspace"/);
   assert.match(index, /data-agentos-project="yuanfudao"/);
   assert.match(script, /openAgentOSProject/);
-  assert.match(script, /renderAgentConfigPage\(projectId === "yuanfudao" \? "sales-skills" : "workflow-build"\)/);
+  assert.match(script, /function openYuanfudaoWorkflowEditor\(\)/);
+  assert.match(script, /params\.set\("workflowId", n8nMirrorWorkflow\.id\)/);
+  assert.match(script, /renderPage\("n8n"\)/);
+  assert.match(script, /function submitAgentOSPrompt\(\)/);
+  assert.match(script, /sessionStorage\.setItem\("agentosPromptDraft", prompt\)/);
+  assert.doesNotMatch(script, /renderAgentConfigPage\(projectId === "yuanfudao"/);
+  const workspacePanel = index.match(/<div class="agentos-projects" data-agentos-panel="workspace"[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/)?.[0] || "";
+  assert.ok(workspacePanel, "AgentOS workspace project panel exists");
+  assert.doesNotMatch(workspacePanel, />运行中</);
+  assert.doesNotMatch(workspacePanel, />草稿</);
+  assert.doesNotMatch(workspacePanel, />已发布</);
   assert.doesNotMatch(script, /已进入猿辅导课包项目空间/);
   assert.doesNotMatch(script, /已切换到项目空间/);
   assert.doesNotMatch(script, /已返回首页/);
