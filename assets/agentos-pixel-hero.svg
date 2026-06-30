@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">云梯智客 AgentOS 像素风工作流插图</title>
+  <desc id="desc">深色画布中展示销售智能体工作流，两侧有像素风角色和浮动方块。</desc>
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102c51"/>
+      <stop offset=".55" stop-color="#18244a"/>
+      <stop offset="1" stop-color="#322944"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef6ff"/>
+      <stop offset="1" stop-color="#dcebff"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eff6ff"/>
+      <stop offset="1" stop-color="#bcd5ff"/>
+    </linearGradient>
+    <linearGradient id="platform" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceaff"/>
+      <stop offset="1" stop-color="#a7c4ff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#4266b0" flood-opacity=".18"/>
+    </filter>
+    <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#233b64" flood-opacity=".16"/>
+    </filter>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0v22" fill="none" stroke="#b9d4f7" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="198" y="38" width="584" height="272" rx="7" fill="url(#screen)" filter="url(#softShadow)"/>
+  <rect x="200" y="40" width="580" height="268" rx="6" fill="none" stroke="#2f86ff" stroke-width="3"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="328" y="96" width="324" height="184" rx="19" fill="url(#panel)"/>
+    <rect x="328" y="96" width="324" height="184" rx="19" fill="url(#grid)" opacity=".75"/>
+    <rect x="328" y="96" width="42" height="184" rx="19" fill="#dbeaff" opacity=".66"/>
+    <rect x="395" y="278" width="190" height="34" fill="#d9e8ff"/>
+    <rect x="418" y="277" width="58" height="27" rx="9" fill="#c7d9ff"/>
+    <rect x="487" y="277" width="58" height="27" rx="9" fill="#c7d9ff"/>
+    <rect x="556" y="277" width="58" height="27" rx="9" fill="#c7d9ff"/>
+  </g>
+
+  <path d="M493 121 C493 148 482 154 482 176 C482 204 433 212 433 238" fill="none" stroke="#8168ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+  <path d="M493 176 C532 198 564 206 604 225" fill="none" stroke="#8168ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+  <circle cx="493" cy="121" r="7" fill="#795cff"/>
+  <circle cx="482" cy="176" r="7" fill="#795cff"/>
+  <circle cx="604" cy="225" r="7" fill="#795cff"/>
+
+  <g filter="url(#cardShadow)" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="442" y="72" width="126" height="50" rx="8" fill="#e8f2ff" stroke="#cfe1fa"/>
+    <text x="457" y="96" fill="#4b6286" font-size="14" font-weight="700">营销活动</text>
+    <text x="457" y="113" fill="#7f91aa" font-size="11">线索进入</text>
+
+    <rect x="425" y="132" width="176" height="55" rx="9" fill="#e9f3ff" stroke="#cfe1fa"/>
+    <text x="443" y="158" fill="#4b6286" font-size="14" font-weight="700">销售顾问</text>
+    <text x="443" y="176" fill="#7f91aa" font-size="11">识别意向 · 跟进任务</text>
+
+    <rect x="352" y="218" width="142" height="52" rx="8" fill="#e9f3ff" stroke="#cfe1fa"/>
+    <text x="370" y="242" fill="#4b6286" font-size="14" font-weight="700">客户系统</text>
+    <text x="370" y="259" fill="#7f91aa" font-size="11">同步资料</text>
+
+    <rect x="584" y="196" width="118" height="50" rx="8" fill="#e9f3ff" stroke="#cfe1fa"/>
+    <text x="599" y="220" fill="#4b6286" font-size="14" font-weight="700">运营检查</text>
+    <text x="599" y="238" fill="#7f91aa" font-size="11">交付结果</text>
+  </g>
+
+  <g opacity=".72">
+    <rect x="374" y="137" width="14" height="14" rx="4" fill="#bdd6ff" stroke="#9fc3ff"/>
+    <rect x="374" y="162" width="14" height="14" rx="4" fill="#bdd6ff" stroke="#9fc3ff"/>
+    <rect x="374" y="188" width="14" height="14" rx="4" fill="#bdd6ff" stroke="#9fc3ff"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M96 318c0-28 22-50 49-50h57c18 0 32 14 32 32v18H96z" fill="url(#platform)"/>
+    <path d="M96 318h138c18 0 32 14 32 32v4H83v-20c0-9 6-16 13-16z" fill="#aac7ff"/>
+    <rect x="83" y="214" width="58" height="58" rx="14" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-18 112 243)"/>
+    <rect x="138" y="181" width="47" height="47" rx="14" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-17 161 204)"/>
+    <rect x="76" y="175" width="46" height="46" rx="10" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-17 99 198)"/>
+  </g>
+
+  <g filter="url(#softShadow)" transform="translate(716 0) scale(-1 1)">
+    <path d="M96 318c0-28 22-50 49-50h57c18 0 32 14 32 32v18H96z" fill="url(#platform)"/>
+    <path d="M96 318h138c18 0 32 14 32 32v4H83v-20c0-9 6-16 13-16z" fill="#aac7ff"/>
+    <rect x="83" y="214" width="58" height="58" rx="14" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-18 112 243)"/>
+    <rect x="138" y="181" width="47" height="47" rx="14" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-17 161 204)"/>
+    <rect x="76" y="175" width="46" height="46" rx="10" fill="url(#ice)" stroke="#8dbbff" stroke-width="4" transform="rotate(-17 99 198)"/>
+  </g>
+
+  <g shape-rendering="crispEdges">
+    <rect x="134" y="258" width="16" height="42" fill="#6b86ff"/>
+    <rect x="130" y="246" width="24" height="16" fill="#5fd0ff"/>
+    <rect x="132" y="262" width="20" height="20" fill="#ffffff"/>
+    <rect x="134" y="282" width="18" height="10" fill="#7a5cff"/>
+    <rect x="126" y="292" width="34" height="8" fill="#ffbd55"/>
+    <rect x="139" y="236" width="12" height="10" fill="#ffe1bd"/>
+    <rect x="128" y="232" width="24" height="8" fill="#3b4b73"/>
+
+    <rect x="830" y="258" width="16" height="42" fill="#6b86ff"/>
+    <rect x="826" y="246" width="24" height="16" fill="#5fd0ff"/>
+    <rect x="828" y="262" width="20" height="20" fill="#ffffff"/>
+    <rect x="830" y="282" width="18" height="10" fill="#7a5cff"/>
+    <rect x="822" y="292" width="34" height="8" fill="#ffbd55"/>
+    <rect x="835" y="236" width="12" height="10" fill="#ffe1bd"/>
+    <rect x="828" y="232" width="24" height="8" fill="#3b4b73"/>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="632" y="216" width="40" height="40" rx="12" fill="#c9ddff"/>
+    <rect x="683" y="216" width="40" height="40" rx="12" fill="#d5e5ff"/>
+    <rect x="734" y="216" width="40" height="40" rx="12" fill="#e0ecff"/>
+    <circle cx="652" cy="236" r="5" fill="#eef6ff"/>
+    <circle cx="703" cy="236" r="5" fill="#eef6ff"/>
+    <circle cx="754" cy="236" r="5" fill="#eef6ff"/>
+  </g>
+
+  <circle cx="657" cy="137" r="14" fill="#2085ff"/>
+  <text x="657" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">1</text>
+</svg>

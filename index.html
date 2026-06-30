@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云梯智客 AgentOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260630-node-upsert1" />
+  </head>
+  <body class="agentos-visible">
+    <section class="agentos-home" aria-label="云梯智客 AgentOS 首页">
+      <div class="agentos-stage">
+        <h1>云梯智客 AgentOS</h1>
+
+        <div class="agentos-builder" aria-hidden="true">
+          <img class="agentos-hero-image" src="./assets/agentos-workforce-hero-light.png" alt="" />
+          <div class="hero-flow-animation">
+            <svg class="hero-flow-lines" viewBox="0 0 900 394">
+              <path class="flow-path path-main" d="M450 67 C450 104 450 122 450 151" />
+              <path class="flow-path path-left" d="M450 181 C410 214 365 225 322 250" />
+              <path class="flow-path path-right" d="M450 181 C503 214 557 225 612 250" />
+              <circle class="flow-node node-main" cx="450" cy="151" r="5" />
+              <circle class="flow-node node-left" cx="322" cy="250" r="5" />
+              <circle class="flow-node node-right" cx="612" cy="250" r="5" />
+            </svg>
+            <div class="hero-flow-card flow-trigger-card">
+              <span>触发</span>
+              <strong>营销活动进入</strong>
+            </div>
+            <div class="hero-flow-card flow-agent-card">
+              <span>智能体</span>
+              <strong>销售顾问智能体</strong>
+              <small>识别意向 · 生成跟进任务</small>
+            </div>
+            <div class="hero-flow-card flow-system-card">
+              <span>资料</span>
+              <strong>客户系统</strong>
+              <small>同步资料</small>
+            </div>
+            <div class="hero-flow-card flow-check-card">
+              <span>检查</span>
+              <strong>运营检查</strong>
+              <small>交付结果</small>
+            </div>
+            <div class="hero-avatar-strip" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="agentos-copy">
+          <h2>智能编排，交付结果</h2>
+          <p>把产品介绍和工作流交给云梯智客，自动生成可执行的销售智能体。</p>
+        </div>
+
+        <div class="agentos-composer">
+          <button class="upload-control" data-agentos-upload aria-label="上传工作流文件">
+            <svg viewBox="0 0 24 24"><path d="M12 3 7 8h3v6h4V8h3l-5-5ZM5 18h14v2H5v-2Z" /></svg>
+            上传文件
+          </button>
+          <textarea id="agentosPrompt" rows="4" placeholder="输入产品介绍，上传工作流文件，快速创建你的销售智能体！"></textarea>
+          <button class="send-control" data-agentos-send aria-label="发送">
+            <svg viewBox="0 0 24 24"><path d="M3 20 22 12 3 4v6l11 2-11 2v6Z" /></svg>
+          </button>
+        </div>
+
+        <div class="agentos-tabs" role="tablist" aria-label="AgentOS 空间切换">
+          <button data-agentos-tab="templates" role="tab" aria-selected="false">模版库</button>
+          <button class="active" data-agentos-tab="workspace" role="tab" aria-selected="true">项目空间</button>
+        </div>
+
+        <div class="agentos-projects" data-agentos-panel="templates" aria-label="模板库" hidden>
+          <article>
+            <div class="project-thumb project-yuanfudao"></div>
+            <div>
+              <span>模板</span>
+              <h3>教育课包销售</h3>
+              <p>招生咨询 · 试听转化</p>
+            </div>
+          </article>
+          <article>
+            <div class="project-thumb project-finance"></div>
+            <div>
+              <span>模板</span>
+              <h3>金融课程顾问</h3>
+              <p>线索筛选 · 风险边界</p>
+            </div>
+          </article>
+          <article>
+            <div class="project-thumb project-health"></div>
+            <div>
+              <span>模板</span>
+              <h3>健康消费咨询</h3>
+              <p>复购运营 · 售后服务</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="agentos-projects" data-agentos-panel="workspace" aria-label="项目空间">
+          <article data-agentos-project="yuanfudao" tabindex="0" role="button" aria-label="进入猿辅导课包项目空间">
+            <div class="project-thumb project-yuanfudao"></div>
+            <div>
+              <span>运行中</span>
+              <h3>猿辅导课包</h3>
+              <p>教育培训 · 6 人协作</p>
+            </div>
+          </article>
+          <article>
+            <div class="project-thumb project-finance"></div>
+            <div>
+              <span>草稿</span>
+              <h3>金融投资课</h3>
+              <p>金融课程 · 3 人协作</p>
+            </div>
+          </article>
+          <article>
+            <div class="project-thumb project-health"></div>
+            <div>
+              <span>已发布</span>
+              <h3>日常保健品</h3>
+              <p>消费健康 · 4 人协作</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="app-shell agent-mode">
+      <aside class="side-panel">
+        <div class="brand-row">
+          <button class="brand-home-link" data-project-name-edit aria-label="项目名，双击编辑">猿辅导课堂</button>
+          <button class="sidebar-toggle-button" data-toggle-agent-sidebar aria-label="收起云梯智客侧栏" data-tooltip="收起侧栏">
+            <svg viewBox="0 0 24 24"><path d="M15.5 5 8.5 12l7 7" /></svg>
+          </button>
+        </div>
+
+        <nav class="section-nav" aria-label="Agent 功能导航">
+          <button class="nav-item" data-section="get-started" aria-label="首页">
+            <span class="tiny-icon home"></span>
+            首页
+          </button>
+          <button class="nav-item" data-section="quality" aria-label="数据优化">
+            <span class="tiny-icon chart"></span>
+            数据优化
+          </button>
+          <button class="nav-group open" data-section="n8n" data-agent-config-toggle aria-label="智能体配置" aria-expanded="true">
+            <span class="tiny-icon book"></span>
+            智能体配置
+            <svg viewBox="0 0 24 24"><path d="m7 10 5 5 5-5" /></svg>
+          </button>
+          <div class="sub-nav agent-config-sidebar-subnav" data-group="agent-config">
+            <button data-agent-config-route="workflow-build">工作流搭建</button>
+            <button data-agent-config-route="sales-skills">销售技能</button>
+            <button data-agent-config-route="smart-tags">智能标签</button>
+            <button data-agent-config-route="knowledge-base">资料中心</button>
+            <button data-agent-config-route="answer-test">执行测试</button>
+          </div>
+          <button class="nav-item" data-section="inbox" aria-label="聚合聊天">
+            <span class="tiny-icon chat"></span>
+            聚合聊天
+          </button>
+        </nav>
+
+        <button class="studio-button" data-action="studioGuide" aria-label="系统设置">
+          <span class="tiny-icon studio"></span>
+          系统设置
+          <span>→</span>
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <strong>云梯智客</strong>
+            <span>教育客服与销售转化中台</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-link" data-open="guide">实施指南</button>
+            <button class="primary-pill" data-open="publish">发布到测试渠道</button>
+          </div>
+        </header>
+
+        <section class="intro-card">
+          <button class="back-button collapse-button" data-toast="已收起说明面板" aria-label="收起说明面板">
+            <svg viewBox="0 0 24 24"><path d="M15.5 5 8.5 12l7 7" /></svg>
+          </button>
+          <div class="intro-copy">
+            <span class="agent-mark">客</span>
+            <h2>云梯智客为客户提供即时接待。</h2>
+            <p>自动回答家长问题、识别高意向线索，并在需要人工跟进时把完整上下文交给顾问。</p>
+            <div class="intro-actions">
+              <button class="dark-button" data-action="studioGuide">
+                <svg viewBox="0 0 24 24"><path d="M6 4h10a2 2 0 0 1 2 2v14H8a3 3 0 0 0-3-3V5a1 1 0 0 1 1-1zm2 4v2h7V8H8zm0 4v2h7v-2H8z" /></svg>
+                配置指南
+              </button>
+              <button class="play-button" data-open="video" aria-label="播放演示">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5z" /></svg>
+              </button>
+            </div>
+          </div>
+          <button class="hero-preview" data-open="video" aria-label="播放演示">
+            <div class="preview-card">
+              <div class="preview-head">
+                <span class="spark">✳</span>
+                <strong>智客</strong>
+                <span>···</span>
+              </div>
+              <p>家长：孩子三年级，单词总是背了就忘，适合上哪个班？</p>
+              <b>云梯智客</b>
+              <p>建议先看自然拼读强化班。我可以帮你安排试听。</p>
+            </div>
+            <span class="play-overlay">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5z" /></svg>
+            </span>
+          </button>
+        </section>
+
+        <section class="industry-section">
+          <h3>选择业务场景</h3>
+          <p>查看同类教育机构可以优先自动化哪些咨询，以及预计能带来的转化贡献。</p>
+          <div class="industry-tabs" id="industryTabs"></div>
+        </section>
+
+        <section class="opportunity-section">
+          <h4>自动化机会</h4>
+          <p id="benchmarkText">根据教育咨询场景样本，云梯智客最高可自动处理 82% 的对话。</p>
+          <div class="stacked-bar" id="stackedBar" aria-label="自动化机会分布"></div>
+          <div class="legend" id="barLegend"></div>
+        </section>
+
+        <section class="start-section">
+          <div class="section-label">
+            <span></span>
+            从哪里开始
+          </div>
+          <div class="start-grid">
+            <article class="start-copy">
+              <h3 id="startTitle">先让智客处理高频咨询</h3>
+              <p id="startBody">把课程介绍、价格政策、试听规则和校区信息接入知识库，智客就能先接住大量重复问题，并把高意向家长标记给销售。</p>
+              <button class="dark-button small" data-action="studioGuide">
+                <svg viewBox="0 0 24 24"><path d="M6 4h10a2 2 0 0 1 2 2v14H8a3 3 0 0 0-3-3V5a1 1 0 0 1 1-1z" /></svg>
+                配置指南
+              </button>
+            </article>
+            <article class="metric-card">
+              <span>常规咨询可自动化</span>
+              <strong id="faqMetric">46%</strong>
+              <p>接入帮助中心和课程资料后，平均可自动处理的 FAQ 与课程咨询占比。</p>
+            </article>
+            <article class="metric-card">
+              <span>预计月度增效金额 <button class="info-dot" data-open="savings">i</button></span>
+              <strong id="savingMetric">¥42,800</strong>
+              <p>按顾问人力、响应时长和线索转化提升估算的每月节省与增收空间。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="preview-section">
+          <div class="section-label">
+            <span></span>
+            看智客如何工作
+          </div>
+          <p>以下是智客面对真实家长咨询时的响应方式，也展示了它如何把复杂问题顺滑转交给人工顾问。</p>
+
+          <div class="mode-tabs" id="modeTabs"></div>
+
+          <div class="preview-grid">
+            <div class="question-list" id="questionList"></div>
+            <div class="conversation-card">
+              <div class="conversation-header">
+                <button class="icon-button" data-step="prev" aria-label="上一条">
+                  <svg viewBox="0 0 24 24"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <div class="avatar">B</div>
+                <div>
+                  <strong>Bailey</strong>
+                  <span id="handoffNote">我们会尽快</span>
+                </div>
+              </div>
+              <div class="chat-window" id="chatWindow"></div>
+              <div class="reply-composer">
+                <input id="replyInput" type="text" value="请帮我生成一句更适合销售跟进的回复" />
+              <button data-action="draft">生成</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="steps-section">
+          <div>
+            <h3>开始让对话产生结果</h3>
+            <p>跟随配置清单，把知识、渠道、转人工和自我迭代一起打通。</p>
+          </div>
+          <div class="step-list" id="stepList"></div>
+        </section>
+
+        <section class="page-view" id="pageView" aria-hidden="true"></section>
+
+        <section class="studio-view" id="studioView" aria-hidden="true">
+          <div class="studio-header">
+            <button class="back-button" data-action="leaveStudio" aria-label="返回快速开始">
+              <svg viewBox="0 0 24 24"><path d="M15.5 5 8.5 12l7 7" /></svg>
+            </button>
+            <div>
+              <span>系统设置</span>
+              <h2>配置云梯智客处理教育咨询</h2>
+              <p>跟随引导把课程资料、常见问答、销售话术和转人工规则接入智能体。这个状态对应系统设置里的智能体配置引导页。</p>
+            </div>
+          </div>
+          <div class="studio-grid">
+            <article>
+              <strong>01</strong>
+              <h3>上传课程知识</h3>
+              <p>接入自然拼读、剑桥英语、试听流程、价格权益和售后政策。</p>
+              <button data-toast="已打开知识导入模拟">打开</button>
+            </article>
+            <article>
+              <strong>02</strong>
+              <h3>设置销售目标</h3>
+              <p>指定优先目标：留资、预约试听、识别高意向、转交顾问。</p>
+              <button data-toast="已打开目标配置模拟">打开</button>
+            </article>
+            <article>
+              <strong>03</strong>
+              <h3>测试真实问题</h3>
+              <p>用家长常问问题检查回答准确率、转人工时机和话术边界。</p>
+              <button data-toast="已打开测试集模拟">打开</button>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <dialog class="modal" id="modal">
+      <form method="dialog">
+        <button class="modal-close" aria-label="关闭">×</button>
+      </form>
+      <div id="modalContent"></div>
+    </dialog>
+
+    <script src="./feishu-inbox.js?v=20260626-tags1"></script>
+    <script src="./script.js?v=20260630-node-upsert1"></script>
+  </body>
+</html>
